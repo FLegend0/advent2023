@@ -89,17 +89,12 @@ key = ["A", "K", "Q", "T", "9", "8", "7" ,"6", "5", "4", "3", "2", "J"]
 def determine_value_with_joker(card):
     card_values = [*card[0]]
     unique = set(card_values)
-#     print(unique)
-#     print(card_values)
-#     print("J" in unique)
     if len(unique) == 1:
         five_of_kind.append(card)
         return
     elif len(unique) == 2:
         if "J" in unique:
-#             print("Hi")
             five_of_kind.append(card)
-#             print(five_of_kind)
             return
         else:
             for i in unique:
